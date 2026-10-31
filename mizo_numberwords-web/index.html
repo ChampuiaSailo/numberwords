@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mizo number words</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="brand">Mizo number words</p>
+        <h1>Numbers ↔ Mizo</h1>
+        <p class="lede">
+          Whole numbers from 0 to 9,999,999,999 in both directions.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="to-words-title">
+        <h2 id="to-words-title">Number → words</h2>
+        <label class="field">
+          <span>Number</span>
+          <input
+            id="number-input"
+            type="text"
+            inputmode="numeric"
+            placeholder="e.g. 42"
+            autocomplete="off"
+            value="42"
+          />
+        </label>
+        <p class="result" id="words-result" aria-live="polite"></p>
+        <p class="error" id="words-error" hidden></p>
+      </section>
+
+      <section class="panel" aria-labelledby="to-number-title">
+        <h2 id="to-number-title">Words → number</h2>
+        <label class="field">
+          <span>Mizo words</span>
+          <textarea
+            id="words-input"
+            rows="2"
+            placeholder="e.g. sawmhnih pahnih"
+          >sawmhnih pahnih</textarea>
+        </label>
+        <p class="result" id="number-result" aria-live="polite"></p>
+        <p class="error" id="number-error" hidden></p>
+      </section>
+
+      <section class="examples" aria-label="Examples">
+        <h2>Examples</h2>
+        <div class="example-row" id="examples"></div>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
