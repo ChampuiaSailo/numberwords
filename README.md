@@ -1,23 +1,30 @@
-# Mizo (Lushai) number ↔ words
+# numberwords
 
-Bidirectional conversion between whole numbers **0 … 9,999,999,999** and Mizo cardinal number words.
+Spec-driven number ↔ words conversion, starting with **Mizo (Lushai)** for integers **0–100**.
 
-No third-party dependencies — Python 3.10+ stdlib only.
+The legacy ad-hoc package under `mizo_numberwords/` still covers a wider range; new work is **YAML lexicon + JSON Schema + conformance vectors**, with portable engines/packages consuming that data.
 
-## Quick start
+## Layout
+
+| Path | Role |
+|------|------|
+| [`docs/cldr-rbnf-borrow.md`](docs/cldr-rbnf-borrow.md) | What we borrow from Unicode CLDR RBNF |
+| [`docs/spec-format.md`](docs/spec-format.md) | Language cardinal YAML format (0–100) |
+| [`spec/language-cardinal.schema.json`](spec/language-cardinal.schema.json) | JSON Schema for language files |
+| [`languages/mizo.yaml`](languages/mizo.yaml) | Mizo lexicon + rules for 0–100 |
+| `vectors/` | Generated conformance pairs (engine PR) |
+| `reference/` | Reference engine (engine PR) |
+| `packages/python/` | First target package (package PR) |
+| `mizo_numberwords/` | Earlier wide-range converter (kept for reference) |
+
+## Quick check (legacy CLI)
 
 ```bash
 python main.py to-words 42
 # sawmli pahnih
+```
 
-python main.py to-words 1000000
-# maktaduai
+## Status
 
-python main.py to-number sawmhnih pahnih
-# 22
-
-python main.py roundtrip 9999999999
-from mizo_numberwords import number_to_words, words_to_number
-
-number_to_words(115)           # 'za sawmpanga'
-words_to_number("sangkhat")    # 1000
+- **Done in data/spec:** CLDR borrow note, schema, Mizo 0–100 YAML with sources.
+- **Follow-ups:** reference engine + vectors, Python package passing vectors; later hundreds/thousands and npm.
