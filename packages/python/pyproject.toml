@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numberwords"
+version = "0.1.0"
+description = "Spec-driven number ↔ words conversion (Mizo 0–100 first)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "numberwords contributors" }]
+keywords = ["mizo", "lushai", "numbers", "spellout", "i18n"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+  "PyYAML>=6",
+  "jsonschema>=4.18",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+numberwords = "numberwords.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/ChampuiaSailo/numberwords"
+Repository = "https://github.com/ChampuiaSailo/numberwords"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+numberwords = [
+  "data/languages/*.yaml",
+  "data/spec/*.json",
+  "data/vectors/*.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

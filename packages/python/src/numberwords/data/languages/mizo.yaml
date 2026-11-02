@@ -1,0 +1,100 @@
+# Mizo (Lushai) cardinal spellout for integers 0–100 inclusive.
+# Canonical emission: unmarked everyday Latin orthography (tones stripped).
+schema_version: "1.0.0"
+
+language:
+  id: mizo
+  bcp47: lus
+  name: Mizo (Lushai)
+  orthography: unmarked-latin
+
+range:
+  min: 0
+  max: 100
+
+sources:
+  - title: "Wikipedia — Mizo language, Cardinal numbers"
+    url: "https://en.wikipedia.org/wiki/Mizo_language#Cardinal_numbers"
+    note: >-
+      Lists (pa)khat…(pa)kua, sàwm, sàwmpakhat…sàwmpakua, sawmhnih, sawmthum,
+      sawmküa, zà. Canonical forms here drop tone diacritics.
+  - title: "CIIL Mizo Primer (cardinals 1–20)"
+    url: "https://www.ciil.org/primers/Mizo_Primer.pdf"
+    note: >-
+      Pakhat…Pakua, Sawm, hyphenated Sawm-pakhat…Sawm-pakua, Sawmhnih.
+      Confirms teens as sawm + full pa- unit.
+  - title: "CIIL / LSI India — Mizo Structure (Numerals)"
+    url: "http://lisindia.ciil.org/Mizo/Mizo_struct.html"
+    note: >-
+      Cardinals through fifty and hundred; spaced teens (sawm pakhat) and
+      compounds (sawmhnih pakhat). Uses palnih for 2 in places — treated as a
+      documented typo/variant of pahnih when parsing later.
+  - title: "Chhangte, Lalnunthangi — The Grammar of Simple Clauses in Mizo"
+    url: "https://sealang.net/sala/archives/pdf8/chhangte1989grammar.pdf"
+    note: >-
+      SEALANG PDF. Documents the decimal system, pa- on free units, and
+      multiplier-after-scale morphology (scale + stem).
+  - title: "Omniglot — Numbers in Mizo"
+    url: "https://www.omniglot.com/language/numbers/mizo.htm"
+    note: >-
+      Zero as bial; optional linker leh in teens/compounds. Useful for variants;
+      canonical teens follow Wikipedia/CIIL Primer concatenation (sawmpakhat),
+      not Omniglot's "sawm leh pakhat".
+
+lexicon:
+  zero: bial
+  units_full:
+    "1": pakhat
+    "2": pahnih
+    "3": pathum
+    "4": pali
+    "5": panga
+    "6": paruk
+    "7": pasarih
+    "8": pariat
+    "9": pakua
+  stems:
+    "1": khat
+    "2": hnih
+    "3": thum
+    "4": li
+    "5": nga
+    "6": ruk
+    "7": sarih
+    "8": riat
+    "9": kua
+  scales:
+    "10": sawm
+    "100": za
+
+# Descending bases (RBNF-style): first rule with base ≤ value applies.
+rules:
+  - base: 100
+    pattern:
+      type: literal_scale
+      scale: 100
+
+  - base: 20
+    pattern:
+      type: scale_stem_remainder
+      scale: 10
+      coefficient: stem
+      scale_join: concat
+      remainder:
+        form: units_full
+        separator: " "
+
+  - base: 11
+    pattern:
+      type: scale_full_concat
+      scale: 10
+      description: teens — sawm + full unit, no separator (sawmpakhat)
+
+  - base: 10
+    pattern:
+      type: literal_scale
+      scale: 10
+
+  - base: 1
+    pattern:
+      type: units_full

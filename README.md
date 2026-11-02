@@ -14,27 +14,34 @@ The legacy ad-hoc package under `mizo_numberwords/` still covers a wider range; 
 | [`languages/mizo.yaml`](languages/mizo.yaml) | Mizo lexicon + rules for 0–100 |
 | [`vectors/mizo-0-100.json`](vectors/mizo-0-100.json) | 101 conformance pairs `{n, text}` |
 | [`reference/`](reference/) | Spec-driven reference engine (`number → text`, `text → number`) |
-| `packages/python/` | Installable Python package (follow-up) |
+| [`packages/python/`](packages/python/) | Installable `numberwords` package (passes vectors) |
 | `mizo_numberwords/` | Earlier wide-range converter (kept for reference) |
 
-## Quick start (reference engine)
+## Quick start
 
 ```bash
-pip install pyyaml jsonschema   # schema validation on load
-python -m reference to-words 42
+pip install -e "packages/python[dev]"
+
+python3 -m numberwords to-words 42
 # sawmli pahnih
 
-python -m reference to-number sawmhnih pahnih
+python3 -m numberwords to-number sawmhnih pahnih
 # 22
 
-python -m reference roundtrip 100
+python3 -m reference roundtrip 100   # in-repo reference CLI
 # 100 → za → 100
 
-python scripts/generate_vectors.py mizo
-pytest tests/test_reference_engine.py
+python3 scripts/generate_vectors.py mizo
+python3 -m pytest tests packages/python/tests
+```
+
+After changing `languages/`, `spec/`, `vectors/`, or `reference/engine.py`, refresh the package copy:
+
+```bash
+python3 scripts/sync_python_package_data.py
 ```
 
 ## Status
 
-- **Done:** CLDR borrow note, schema, Mizo 0–100 YAML, reference engine, vectors, round-trip tests.
-- **Follow-ups:** installable Python package; later hundreds/thousands and npm.
+- **Done (0–100 Mizo):** CLDR borrow note, JSON Schema, `languages/mizo.yaml`, reference engine, conformance vectors, round-trips, Python package.
+- **Deferred:** extend range (hundreds, thousands, …) and add an npm target.
