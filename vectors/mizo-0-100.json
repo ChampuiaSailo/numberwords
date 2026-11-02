@@ -1,0 +1,415 @@
+{
+  "language": "mizo",
+  "bcp47": "lus",
+  "range": {
+    "min": 0,
+    "max": 100
+  },
+  "count": 101,
+  "vectors": [
+    {
+      "n": 0,
+      "text": "bial"
+    },
+    {
+      "n": 1,
+      "text": "pakhat"
+    },
+    {
+      "n": 2,
+      "text": "pahnih"
+    },
+    {
+      "n": 3,
+      "text": "pathum"
+    },
+    {
+      "n": 4,
+      "text": "pali"
+    },
+    {
+      "n": 5,
+      "text": "panga"
+    },
+    {
+      "n": 6,
+      "text": "paruk"
+    },
+    {
+      "n": 7,
+      "text": "pasarih"
+    },
+    {
+      "n": 8,
+      "text": "pariat"
+    },
+    {
+      "n": 9,
+      "text": "pakua"
+    },
+    {
+      "n": 10,
+      "text": "sawm"
+    },
+    {
+      "n": 11,
+      "text": "sawmpakhat"
+    },
+    {
+      "n": 12,
+      "text": "sawmpahnih"
+    },
+    {
+      "n": 13,
+      "text": "sawmpathum"
+    },
+    {
+      "n": 14,
+      "text": "sawmpali"
+    },
+    {
+      "n": 15,
+      "text": "sawmpanga"
+    },
+    {
+      "n": 16,
+      "text": "sawmparuk"
+    },
+    {
+      "n": 17,
+      "text": "sawmpasarih"
+    },
+    {
+      "n": 18,
+      "text": "sawmpariat"
+    },
+    {
+      "n": 19,
+      "text": "sawmpakua"
+    },
+    {
+      "n": 20,
+      "text": "sawmhnih"
+    },
+    {
+      "n": 21,
+      "text": "sawmhnih pakhat"
+    },
+    {
+      "n": 22,
+      "text": "sawmhnih pahnih"
+    },
+    {
+      "n": 23,
+      "text": "sawmhnih pathum"
+    },
+    {
+      "n": 24,
+      "text": "sawmhnih pali"
+    },
+    {
+      "n": 25,
+      "text": "sawmhnih panga"
+    },
+    {
+      "n": 26,
+      "text": "sawmhnih paruk"
+    },
+    {
+      "n": 27,
+      "text": "sawmhnih pasarih"
+    },
+    {
+      "n": 28,
+      "text": "sawmhnih pariat"
+    },
+    {
+      "n": 29,
+      "text": "sawmhnih pakua"
+    },
+    {
+      "n": 30,
+      "text": "sawmthum"
+    },
+    {
+      "n": 31,
+      "text": "sawmthum pakhat"
+    },
+    {
+      "n": 32,
+      "text": "sawmthum pahnih"
+    },
+    {
+      "n": 33,
+      "text": "sawmthum pathum"
+    },
+    {
+      "n": 34,
+      "text": "sawmthum pali"
+    },
+    {
+      "n": 35,
+      "text": "sawmthum panga"
+    },
+    {
+      "n": 36,
+      "text": "sawmthum paruk"
+    },
+    {
+      "n": 37,
+      "text": "sawmthum pasarih"
+    },
+    {
+      "n": 38,
+      "text": "sawmthum pariat"
+    },
+    {
+      "n": 39,
+      "text": "sawmthum pakua"
+    },
+    {
+      "n": 40,
+      "text": "sawmli"
+    },
+    {
+      "n": 41,
+      "text": "sawmli pakhat"
+    },
+    {
+      "n": 42,
+      "text": "sawmli pahnih"
+    },
+    {
+      "n": 43,
+      "text": "sawmli pathum"
+    },
+    {
+      "n": 44,
+      "text": "sawmli pali"
+    },
+    {
+      "n": 45,
+      "text": "sawmli panga"
+    },
+    {
+      "n": 46,
+      "text": "sawmli paruk"
+    },
+    {
+      "n": 47,
+      "text": "sawmli pasarih"
+    },
+    {
+      "n": 48,
+      "text": "sawmli pariat"
+    },
+    {
+      "n": 49,
+      "text": "sawmli pakua"
+    },
+    {
+      "n": 50,
+      "text": "sawmnga"
+    },
+    {
+      "n": 51,
+      "text": "sawmnga pakhat"
+    },
+    {
+      "n": 52,
+      "text": "sawmnga pahnih"
+    },
+    {
+      "n": 53,
+      "text": "sawmnga pathum"
+    },
+    {
+      "n": 54,
+      "text": "sawmnga pali"
+    },
+    {
+      "n": 55,
+      "text": "sawmnga panga"
+    },
+    {
+      "n": 56,
+      "text": "sawmnga paruk"
+    },
+    {
+      "n": 57,
+      "text": "sawmnga pasarih"
+    },
+    {
+      "n": 58,
+      "text": "sawmnga pariat"
+    },
+    {
+      "n": 59,
+      "text": "sawmnga pakua"
+    },
+    {
+      "n": 60,
+      "text": "sawmruk"
+    },
+    {
+      "n": 61,
+      "text": "sawmruk pakhat"
+    },
+    {
+      "n": 62,
+      "text": "sawmruk pahnih"
+    },
+    {
+      "n": 63,
+      "text": "sawmruk pathum"
+    },
+    {
+      "n": 64,
+      "text": "sawmruk pali"
+    },
+    {
+      "n": 65,
+      "text": "sawmruk panga"
+    },
+    {
+      "n": 66,
+      "text": "sawmruk paruk"
+    },
+    {
+      "n": 67,
+      "text": "sawmruk pasarih"
+    },
+    {
+      "n": 68,
+      "text": "sawmruk pariat"
+    },
+    {
+      "n": 69,
+      "text": "sawmruk pakua"
+    },
+    {
+      "n": 70,
+      "text": "sawmsarih"
+    },
+    {
+      "n": 71,
+      "text": "sawmsarih pakhat"
+    },
+    {
+      "n": 72,
+      "text": "sawmsarih pahnih"
+    },
+    {
+      "n": 73,
+      "text": "sawmsarih pathum"
+    },
+    {
+      "n": 74,
+      "text": "sawmsarih pali"
+    },
+    {
+      "n": 75,
+      "text": "sawmsarih panga"
+    },
+    {
+      "n": 76,
+      "text": "sawmsarih paruk"
+    },
+    {
+      "n": 77,
+      "text": "sawmsarih pasarih"
+    },
+    {
+      "n": 78,
+      "text": "sawmsarih pariat"
+    },
+    {
+      "n": 79,
+      "text": "sawmsarih pakua"
+    },
+    {
+      "n": 80,
+      "text": "sawmriat"
+    },
+    {
+      "n": 81,
+      "text": "sawmriat pakhat"
+    },
+    {
+      "n": 82,
+      "text": "sawmriat pahnih"
+    },
+    {
+      "n": 83,
+      "text": "sawmriat pathum"
+    },
+    {
+      "n": 84,
+      "text": "sawmriat pali"
+    },
+    {
+      "n": 85,
+      "text": "sawmriat panga"
+    },
+    {
+      "n": 86,
+      "text": "sawmriat paruk"
+    },
+    {
+      "n": 87,
+      "text": "sawmriat pasarih"
+    },
+    {
+      "n": 88,
+      "text": "sawmriat pariat"
+    },
+    {
+      "n": 89,
+      "text": "sawmriat pakua"
+    },
+    {
+      "n": 90,
+      "text": "sawmkua"
+    },
+    {
+      "n": 91,
+      "text": "sawmkua pakhat"
+    },
+    {
+      "n": 92,
+      "text": "sawmkua pahnih"
+    },
+    {
+      "n": 93,
+      "text": "sawmkua pathum"
+    },
+    {
+      "n": 94,
+      "text": "sawmkua pali"
+    },
+    {
+      "n": 95,
+      "text": "sawmkua panga"
+    },
+    {
+      "n": 96,
+      "text": "sawmkua paruk"
+    },
+    {
+      "n": 97,
+      "text": "sawmkua pasarih"
+    },
+    {
+      "n": 98,
+      "text": "sawmkua pariat"
+    },
+    {
+      "n": 99,
+      "text": "sawmkua pakua"
+    },
+    {
+      "n": 100,
+      "text": "za"
+    }
+  ]
+}
